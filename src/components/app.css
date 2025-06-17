@@ -1,0 +1,10 @@
+.avatar {
+  border-radius: 50%;
+}
+
+.header{
+    background-color: blue;
+    width:fit-content;
+    color: white;
+}
+
