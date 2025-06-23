@@ -5,14 +5,15 @@
 // element.innerHTML = `${sayHello(5).join('<br>')} <br> sum : ${sum(5,8)}`;
 
 // document.body.append(element);
-import React from "react";
+import React, { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 // import Welcome from './components/Welcome';
 import App from "./components/App";
 
-const root = document.getElementById("root");
-createRoot(root).render(
-  <React.StrictMode>
+const root = createRoot(document.getElementById('root'));
+root.render(
+  <StrictMode>
     <App />
-  </React.StrictMode>
+  </StrictMode>
 );
+

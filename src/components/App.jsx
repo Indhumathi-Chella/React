@@ -17,6 +17,10 @@ import { FragmentComponet, MultipleComponent } from "./Fragment";
 import { DisplayPortal, ViewPortal } from "./portal";
 import ProfilerExample from "./Profiler";
 import DisplayJsx from "./WithoutJsx";
+import { AppName } from "../StrictMode";
+import { InputValue } from "./uncontrolled";
+import MyCustom from "./CustomElement";
+import { CounterTitle, ProfileName } from "./StateExample";
 
 function Header() {
   return <h1 className="header">Welcome to Profile!.</h1>;
@@ -69,6 +73,11 @@ function Layout() {
       <ProfilerExample />
       <DisplayJsx />
       <VideoPlayer />
+      <AppName />
+      <InputValue />
+      <MyCustom />
+      <CounterTitle />
+      <ProfileName />
       <Footer />
     </>
   );
