@@ -9,9 +9,9 @@ function PasswordFeild() {
     <>
       <label htmlFor="Password">
         Name:{" "}
-        <input type="password" id="password" aria-describedby={passwordHint} />{" "}
+        <input type="password" id="password" aria-describedby={passwordHint} style={{width:200}} />{" "}
       </label>
-      <p id={passwordHint}>
+      <p >
         The password should contain at least 18 characters
       </p>
     </>
@@ -24,9 +24,9 @@ function Form() {
     <>
       <label htmlFor="name" id={`${id} -name`}>
         {" "}
-        Name: <input type="text" id={`${id} -name`} />
+        Name: <input type="text" id={`${id} -name`} style={{width:200}} />
       </label>
-      <label htmlFor="password" id={`${id} -password`}>
+      <label htmlFor="password" id={`${id} -password`} style={{width:200}}>
         {" "}
         Password: <input type="password" id={`${id} -password`} />
       </label>

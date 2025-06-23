@@ -9,7 +9,7 @@ export default function StudenList() {
     <>
       <h2>Rendering List</h2>
       <ul>
-        {students.map((student, index) => (
+        {students.map((student) => (
           <li
             key={student.id}
             style={{ color: student.grade == "A" ? "green" : "maroon" }}

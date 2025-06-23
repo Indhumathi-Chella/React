@@ -6,6 +6,7 @@ function Input({ value, onChange }) {
       type="text"
       value={value}
       onChange={(e) => onChange(e.target.value)}
+      style={{width:200, margin :10, display:"block"}}
     />
   );
 }

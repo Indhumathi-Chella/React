@@ -10,6 +10,13 @@ import StudenList from "./RenderList";
 import FeedbackForm from "./Form";
 import TextInputs from "./InputState";
 import { PasswordFeild, Form } from "./Accessibility";
+import { ThemeProvider } from "./Context";
+import { GreetingLayout } from "./ErrorBoundary";
+import { Display, DisplayInput, InputFocus, VideoPlayer } from "./Reference";
+import { FragmentComponet, MultipleComponent } from "./Fragment";
+import { DisplayPortal, ViewPortal } from "./portal";
+import ProfilerExample from "./Profiler";
+import DisplayJsx from "./WithoutJsx";
 
 function Header() {
   return <h1 className="header">Welcome to Profile!.</h1>;
@@ -50,6 +57,18 @@ function Layout() {
       <TextInputs />
       <PasswordFeild />
       <Form />
+      <ThemeProvider />
+      <GreetingLayout />
+      <InputFocus />
+      <DisplayInput />
+      <Display />
+      <MultipleComponent />
+      <FragmentComponet />
+      <DisplayPortal />
+      <ViewPortal />
+      <ProfilerExample />
+      <DisplayJsx />
+      <VideoPlayer />
       <Footer />
     </>
   );
@@ -95,9 +114,9 @@ function AppTimer() {
   const [showTimer, setShowTimer] = useState(true);
 
   let sum = (a, b) => a + b;
-  console.log(sum(2,3));
+  console.log(sum(2, 3));
   const [count, setCount] = useState(0);
-  
+
   return (
     <div>
       <button

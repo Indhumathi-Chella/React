@@ -92,7 +92,7 @@ export default function FeedbackForm() {
           <p>Email: {submittedData.email}</p>
           <p>Rating: {submittedData.rating}</p>
           <p>Comment: {submittedData.comment}</p>
-          <p>Subscription : {submittedData.comment == true ? "Yes" : "No"}</p>
+          <p>Subscription : {submittedData.subscribe == true ? "Yes" : "No"}</p>
         </div>
       )}
     </>
