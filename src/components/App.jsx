@@ -26,6 +26,7 @@ import { StopWatch } from "./RefHooks";
 import Sum from "./MemoHook";
 import ButtonCounter from "./Callbackhook";
 import ComplexCounter from "./Reducerhook";
+import SearchList from "./transition";
 
 function Header() {
   return <h1 className="header">Welcome to Profile!.</h1>;
@@ -88,6 +89,7 @@ function Layout() {
       <Sum />
       <ButtonCounter />
       <ComplexCounter />
+     <SearchList items={["Apple", "Banana", "Cherry"]} />
       <Footer />
     </>
   );
