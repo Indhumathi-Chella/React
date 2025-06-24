@@ -26,7 +26,7 @@ import { StopWatch } from "./RefHooks";
 import Sum from "./MemoHook";
 import ButtonCounter from "./Callbackhook";
 import ComplexCounter from "./Reducerhook";
-import SearchList from "./transition";
+import SearchList from "./Transition";
 
 function Header() {
   return <h1 className="header">Welcome to Profile!.</h1>;
