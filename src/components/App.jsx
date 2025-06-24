@@ -9,7 +9,7 @@ import { MyButton, TextInput, CounterControl } from "./EventHandling";
 import StudenList from "./RenderList";
 import FeedbackForm from "./Form";
 import TextInputs from "./InputState";
-import { PasswordFeild, Form } from "./Accessibility";
+import { PasswordField, Form } from "./Accessibility";
 import { ThemeProvider } from "./Context";
 import { GreetingLayout } from "./ErrorBoundary";
 import { Display, DisplayInput, InputFocus, VideoPlayer } from "./Reference";
@@ -21,6 +21,10 @@ import { AppName } from "../StrictMode";
 import { InputValue } from "./uncontrolled";
 import MyCustom from "./CustomElement";
 import { CounterTitle, ProfileName } from "./StateExample";
+import { LiveClock } from "./EffectHook";
+import { StopWatch } from "./RefHooks";
+import Sum from "./MemoHook";
+import ButtonCounter from "./Callbackhook";
 
 function Header() {
   return <h1 className="header">Welcome to Profile!.</h1>;
@@ -48,9 +52,9 @@ function Layout() {
       <Details />
       <Counter />
       <FruitShow />
-      <AppTimer />
+      {/* <AppTimer /> */}
       <SwitchLight />
-      <ScrollLogger />
+      {/* <ScrollLogger /> */}
       <MyButton />
       <MyButton />
       <TextInput />
@@ -59,7 +63,7 @@ function Layout() {
       <StudenList />
       <FeedbackForm />
       <TextInputs />
-      <PasswordFeild />
+      <PasswordField />
       <Form />
       <ThemeProvider />
       <GreetingLayout />
@@ -78,6 +82,10 @@ function Layout() {
       <MyCustom />
       <CounterTitle />
       <ProfileName />
+      <LiveClock />
+      <StopWatch />
+      <Sum />
+      <ButtonCounter />
       <Footer />
     </>
   );

@@ -4,7 +4,7 @@ function passwordHint() {
   const passwordHintId = useId();
 }
 
-function PasswordFeild() {
+function PasswordField() {
   return (
     <>
       <label htmlFor="Password">
@@ -22,15 +22,15 @@ function Form() {
   const id = useId();
   return (
     <>
-      <label htmlFor="name" id={`${id} -name`}>
+      <label htmlFor="name" id={`${id}-name`}>
         {" "}
-        Name: <input type="text" id={`${id} -name`} style={{width:200}} />
+        Name: <input type="text" id={`${id}-name`} style={{width:200}} />
       </label>
-      <label htmlFor="password" id={`${id} -password`} style={{width:200}}>
+      <label htmlFor="password" id={`${id}-password`} style={{width:200}}>
         {" "}
-        Password: <input type="password" id={`${id} -password`} />
+        Password: <input type="password" id={`${id}-password`} />
       </label>
     </>
   );
 }
-export { PasswordFeild, Form };
+export { PasswordField, Form };
