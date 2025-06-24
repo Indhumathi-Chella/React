@@ -14,17 +14,18 @@ import { ThemeProvider } from "./Context";
 import { GreetingLayout } from "./ErrorBoundary";
 import { Display, DisplayInput, InputFocus, VideoPlayer } from "./Reference";
 import { FragmentComponet, MultipleComponent } from "./Fragment";
-import { DisplayPortal, ViewPortal } from "./portal";
+import { DisplayPortal, ViewPortal } from "./Portal";
 import ProfilerExample from "./Profiler";
 import DisplayJsx from "./WithoutJsx";
 import { AppName } from "../StrictMode";
-import { InputValue } from "./uncontrolled";
+import { InputValue } from "./Uncontrolled";
 import MyCustom from "./CustomElement";
 import { CounterTitle, ProfileName } from "./StateExample";
 import { LiveClock } from "./EffectHook";
 import { StopWatch } from "./RefHooks";
 import Sum from "./MemoHook";
 import ButtonCounter from "./Callbackhook";
+import ComplexCounter from "./Reducerhook";
 
 function Header() {
   return <h1 className="header">Welcome to Profile!.</h1>;
@@ -86,6 +87,7 @@ function Layout() {
       <StopWatch />
       <Sum />
       <ButtonCounter />
+      <ComplexCounter />
       <Footer />
     </>
   );

@@ -9,7 +9,7 @@ function ButtonCounter() {
 
   const counter = useCallback(() => {
     setCount((c) => c + 1);
-  });
+  },[]);
   return (
     <div>
       <h2>Count: {count}</h2>
