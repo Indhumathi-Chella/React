@@ -18,7 +18,7 @@ import { DisplayPortal, ViewPortal } from "./Portal";
 import ProfilerExample from "./Profiler";
 import DisplayJsx from "./WithoutJsx";
 import { AppName } from "../StrictMode";
-import { InputValue } from "./Uncontrolled";
+import { CustomCounter, InputValue } from "./Uncontrolled";
 import MyCustom from "./CustomElement";
 import { CounterTitle, ProfileName } from "./StateExample";
 import { LiveClock } from "./EffectHook";
@@ -26,7 +26,9 @@ import { StopWatch } from "./RefHooks";
 import Sum from "./MemoHook";
 import ButtonCounter from "./Callbackhook";
 import ComplexCounter from "./Reducerhook";
-import SearchList from "./Transition";
+import { SearchList, SearchLists } from "./Transition";
+import { CounterComponent,UserData } from "./Customhook";
+
 
 function Header() {
   return <h1 className="header">Welcome to Profile!.</h1>;
@@ -89,7 +91,11 @@ function Layout() {
       <Sum />
       <ButtonCounter />
       <ComplexCounter />
-     <SearchList items={["Apple", "Banana", "Cherry"]} />
+      <SearchList items={['Indhu','Arun','Revi','Janu']} />
+      <SearchLists items={['Indhu','Arun','Revi','Janu']} />
+      <CounterComponent />
+      <CustomCounter />
+      <UserData />
       <Footer />
     </>
   );
