@@ -31,24 +31,23 @@ function SearchList({ items }) {
   );
 }
 
-
 function SearchLists({ items }) {
-  const [input, setInput] = useState('');
+  const [input, setInput] = useState("");
   const [result, setResult] = useState(items);
   const [isPending, startTransition] = useTransition();
-  const [isLoading, setIsLoading] = useState(false); 
+  const [isLoading, setIsLoading] = useState(false);
 
   async function handleChange(e) {
     const value = e.target.value;
     setInput(value);
-    setIsLoading(true); 
+    setIsLoading(true);
     const filtered = await new Promise((resolve) => {
       setTimeout(() => {
-        const data = items.filter(item =>
+        const data = items.filter((item) =>
           item.toLowerCase().includes(value.toLowerCase())
         );
         resolve(data);
-      }, 500); 
+      }, 500);
     });
 
     startTransition(() => {
@@ -62,7 +61,7 @@ function SearchLists({ items }) {
       <input type="text" value={input} onChange={handleChange} />
       {(isPending || isLoading) && <p>Loading...</p>}
       <ul>
-        {result.map(item => (
+        {result.map((item) => (
           <li key={item}>{item}</li>
         ))}
       </ul>
@@ -70,6 +69,4 @@ function SearchLists({ items }) {
   );
 }
 
-
-
-export { SearchList,SearchLists };
+export { SearchList, SearchLists };
