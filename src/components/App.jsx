@@ -27,8 +27,9 @@ import Sum from "./MemoHook";
 import ButtonCounter from "./Callbackhook";
 import ComplexCounter from "./Reducerhook";
 import { SearchList, SearchLists } from "./Transition";
-import { CounterComponent,UserData } from "./Customhook";
-
+import { CounterComponent, UserData } from "./Customhook";
+import BoxWidth from "./LayoutEffect";
+import { UpdateName } from "./Serverfunction";
 
 function Header() {
   return <h1 className="header">Welcome to Profile!.</h1>;
@@ -91,11 +92,13 @@ function Layout() {
       <Sum />
       <ButtonCounter />
       <ComplexCounter />
-      <SearchList items={['Indhu','Arun','Revi','Janu']} />
-      <SearchLists items={['Indhu','Arun','Revi','Janu']} />
+      <SearchList items={["Indhu", "Arun", "Revi", "Janu"]} />
+      <SearchLists items={["Indhu", "Arun", "Revi", "Janu"]} />
       <CounterComponent />
       <CustomCounter />
       <UserData />
+      <BoxWidth />
+      <UpdateName />
       <Footer />
     </>
   );
