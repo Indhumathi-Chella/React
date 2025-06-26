@@ -30,6 +30,7 @@ import { SearchList, SearchLists } from "./Transition";
 import { CounterComponent, UserData } from "./Customhook";
 import BoxWidth from "./LayoutEffect";
 import { UpdateName } from "./Serverfunction";
+import DisplayGreet from "./LazyLoading";
 
 function Header() {
   return <h1 className="header">Welcome to Profile!.</h1>;
@@ -99,6 +100,7 @@ function Layout() {
       <UserData />
       <BoxWidth />
       <UpdateName />
+      <DisplayGreet />
       <Footer />
     </>
   );
