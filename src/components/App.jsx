@@ -31,6 +31,7 @@ import { CounterComponent, UserData } from "./Customhook";
 import BoxWidth from "./LayoutEffect";
 import { UpdateName } from "./Serverfunction";
 import DisplayGreet from "./LazyLoading";
+import Mode from "./Use";
 
 function Header() {
   return <h1 className="header">Welcome to Profile!.</h1>;
@@ -101,6 +102,7 @@ function Layout() {
       <BoxWidth />
       <UpdateName />
       <DisplayGreet />
+      <Mode />
       <Footer />
     </>
   );
