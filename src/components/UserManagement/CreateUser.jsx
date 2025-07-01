@@ -1,5 +1,5 @@
 import { useState } from "react";
-import axios from "axios";
+import { createUser } from "../../services/userService";
 
 function CreateUser() {
   const [formData, setFormData] = useState({
@@ -13,33 +13,33 @@ function CreateUser() {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   }
 
-//   async function handleSubmit(e) {
-//     e.preventDefault();
-//     try {
-//       const response = await axios.post(
-//         "https://crud-user.free.beeceptor.com/api/users",
-//         formData
-//       );
-//       setMessage({ status: true, message: "User Created Successfully" });
-//       console.log(response.data);
-//     } catch (error) {
-//       setMessage({ status: false, message: "Failed to Create User" });
-//       console.log(error);
-//     }
-//   }
+  //   async function handleSubmit(e) {
+  //     e.preventDefault();
+  //     try {
+  //       const response = await axios.post(
+  //         "https://crud-user.free.beeceptor.com/api/users",
+  //         formData
+  //       );
+  //       setMessage({ status: true, message: "User Created Successfully" });
+  //       console.log(response.data);
+  //     } catch (error) {
+  //       setMessage({ status: false, message: "Failed to Create User" });
+  //       console.log(error);
+  //     }
+  //   }
 
-function handleSubmit(e){
+  function handleSubmit(e) {
     e.preventDefault();
-    axios.post('https://685e6c557b57aebd2af961ab.mockapi.io/api/users',formData)
-    .then(response => {
-        setMessage({status:true,message:"User Created Successfully"});
+    createUser(formData)
+      .then((response) => {
+        setMessage({ status: true, message: "User Created Successfully" });
         console.log(response.data);
-    })
-    .catch(error =>{
-        setMessage({status:false,message:"Failed to create user"});
+      })
+      .catch((error) => {
+        setMessage({ status: false, message: "Failed to create user" });
         console.log(error.data);
-    });
-}
+      });
+  }
   return (
     <>
       <h3>Create User</h3>

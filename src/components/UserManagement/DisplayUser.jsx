@@ -1,11 +1,19 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import "./user.css";
+import UpdateUserModal from "./UpdateUser";
+import { deleteUser, getUsers } from "../../services/userService";
 
 function DisplayUser() {
   const [users, setUsers] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [editingUser, setEditingUser] = useState(null);
+  const [editFormData, setEditFormData] = useState({
+    name: "",
+    email: "",
+    password: "",
+  });
 
   useEffect(() => {
     // async function handleData() {
@@ -20,9 +28,7 @@ function DisplayUser() {
     //     setLoading(false);
     //   }
     // }
-
-    axios
-      .get("https://685e6c557b57aebd2af961ab.mockapi.io/api/users")
+    getUsers()
       .then((response) => {
         setUsers(response.data);
         setLoading(false);
@@ -48,8 +54,7 @@ function DisplayUser() {
   const handleDelete = (userId) => {
     confirm("Are you sure you want to delete?");
     setLoading(true);
-    axios
-      .delete(`https://685e6c557b57aebd2af961ab.mockapi.io/api/users/${userId}`)
+    deleteUser(userId)
       .then((res) => {
         setUsers(users.filter((user) => user.id !== userId));
         setLoading(false);
@@ -58,6 +63,15 @@ function DisplayUser() {
         setError("Failed to delete");
         setLoading(false);
       });
+  };
+
+  const handleEditClick = (user) => {
+    setEditingUser(user);
+    setEditFormData({
+      name: user.name,
+      email: user.email,
+      password: user.password,
+    });
   };
 
   if (loading) {
@@ -71,7 +85,7 @@ function DisplayUser() {
   return (
     <>
       <h2>User Details</h2>
-      <table border>
+      <table>
         <thead>
           <tr>
             <th>Id</th>
@@ -89,7 +103,12 @@ function DisplayUser() {
               <td>{user.email}</td>
               <td>{user.password}</td>
               <td>
-                <button className="btn btn-edit">Edit</button>{" "}
+                <button
+                  className="btn btn-edit"
+                  onClick={() => handleEditClick(user)}
+                >
+                  Edit
+                </button>{" "}
                 <button
                   className="btn btn-delete"
                   onClick={() => handleDelete(user.id)}
@@ -101,6 +120,16 @@ function DisplayUser() {
           ))}
         </tbody>
       </table>
+      <UpdateUserModal
+        editingUser={editingUser}
+        editFormData={editFormData}
+        setEditFormData={setEditFormData}
+        setEditingUser={setEditingUser}
+        setUsers={setUsers}
+        users={users}
+        setLoading={setLoading}
+        setError={setError}
+      />
     </>
   );
 }
