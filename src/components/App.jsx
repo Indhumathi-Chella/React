@@ -32,6 +32,13 @@ import BoxWidth from "./LayoutEffect";
 import { UpdateName } from "./Serverfunction";
 import DisplayGreet from "./LazyLoading";
 import Mode from "./Use";
+import CreateUser from "./UserManagement/CreateUser";
+import DisplayUser from "./UserManagement/DisplayUser";
+import {DashboardLayout, Navbar, ShowCurrentPath} from "./navbar";
+import {RouteParam,  NavigationExample } from "./Useparam";
+import RouteUserList from "./Searchparam";
+import ProtectedExample from "./ProtectedRoute";
+import CounterRedux from "./Reduxcounter";
 
 function Header() {
   return <h1 className="header">Welcome to Profile!.</h1>;
@@ -103,6 +110,18 @@ function Layout() {
       <UpdateName />
       <DisplayGreet />
       <Mode />
+      <CreateUser />
+      <DisplayUser />
+      <Navbar />
+      <DashboardLayout />
+      <ShowCurrentPath />
+      <RouteParam />
+      <NavigationExample />
+      <RouteUserList />
+      <ProtectedExample />
+      <div>
+        <CounterRedux />
+      </div>
       <Footer />
     </>
   );
