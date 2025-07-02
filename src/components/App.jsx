@@ -39,6 +39,8 @@ import {RouteParam,  NavigationExample } from "./Useparam";
 import RouteUserList from "./Searchparam";
 import ProtectedExample from "./ProtectedRoute";
 import CounterRedux from "./Reduxcounter";
+import PostDisplay from "../features/Post";
+import UserDetailDisplay from "../features/User";
 
 function Header() {
   return <h1 className="header">Welcome to Profile!.</h1>;
@@ -120,7 +122,9 @@ function Layout() {
       <RouteUserList />
       <ProtectedExample />
       <div>
-        <CounterRedux />
+        {/* <CounterRedux /> */}
+        <PostDisplay />
+        <UserDetailDisplay />
       </div>
       <Footer />
     </>
