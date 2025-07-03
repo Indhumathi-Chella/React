@@ -41,6 +41,7 @@ import ProtectedExample from "./ProtectedRoute";
 import CounterRedux from "./Reduxcounter";
 import PostDisplay from "../features/Post";
 import UserDetailDisplay from "../features/User";
+import ListTodo from "../features/Todo";
 
 function Header() {
   return <h1 className="header">Welcome to Profile!.</h1>;
@@ -108,6 +109,57 @@ function Layout() {
       <CounterComponent />
       <CustomCounter />
       <UserData />
+      <BoxWidth /><Welcome />
+      <h1>this is a total content.</h1>
+      <Header />
+      <Content />
+      <Profile />
+      <UserList />
+      <CheckStatus />
+      <ProfileCard />
+      <Details />
+      <Counter />
+      <FruitShow />
+      {/* <AppTimer /> */}
+      <SwitchLight />
+      {/* <ScrollLogger /> */}
+      <MyButton />
+      <MyButton />
+      <TextInput />
+      <CounterControl />
+      <Dashboard />
+      <StudenList />
+      <FeedbackForm />
+      <TextInputs />
+      <PasswordField />
+      <Form />
+      <ThemeProvider />
+      <GreetingLayout />
+      <InputFocus />
+      <DisplayInput />
+      <Display />
+      <MultipleComponent />
+      <FragmentComponet />
+      <DisplayPortal />
+      <ViewPortal />
+      <ProfilerExample />
+      <DisplayJsx />
+      <VideoPlayer />
+      <AppName />
+      <InputValue />
+      <MyCustom />
+      <CounterTitle />
+      <ProfileName />
+      <LiveClock />
+      <StopWatch />
+      <Sum />
+      <ButtonCounter />
+      <ComplexCounter />
+      <SearchList items={["Indhu", "Arun", "Revi", "Janu"]} />
+      <SearchLists items={["Indhu", "Arun", "Revi", "Janu"]} />
+      <CounterComponent />
+      <CustomCounter />
+      <UserData />
       <BoxWidth />
       <UpdateName />
       <DisplayGreet />
@@ -125,6 +177,7 @@ function Layout() {
         {/* <CounterRedux /> */}
         <PostDisplay />
         <UserDetailDisplay />
+        <ListTodo />
       </div>
       <Footer />
     </>
