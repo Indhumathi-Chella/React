@@ -1,5 +1,5 @@
 import React from "react";
-import { updateUser } from "../../services/userService";
+import userService, { updateUser } from "../../services/userService";
 
 const UpdateUserModal = ({
   editingUser,
@@ -22,7 +22,7 @@ const UpdateUserModal = ({
 
   const handleSave = () => {
     setLoading(true);
-    updateUser(editingUser.id, editFormData)
+    userService.updateUser(editingUser.id, editFormData)
       .then((res) => {
         setUsers(
           users.map((user) => (user.id === editingUser.id ? res.data : user))

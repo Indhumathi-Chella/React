@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { createUser } from "../../services/userService";
+import userService from "../../services/userService";
 
 function CreateUser() {
   const [formData, setFormData] = useState({
@@ -30,7 +30,7 @@ function CreateUser() {
 
   function handleSubmit(e) {
     e.preventDefault();
-    createUser(formData)
+    userService.createUser(formData)
       .then((response) => {
         setMessage({ status: true, message: "User Created Successfully" });
         console.log(response.data);

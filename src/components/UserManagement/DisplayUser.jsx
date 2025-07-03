@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import "./user.css";
 import UpdateUserModal from "./UpdateUser";
-import { deleteUser, getUsers } from "../../services/userService";
+import userService, { deleteUser, getUsers } from "../../services/userService";
 
 function DisplayUser() {
   const [users, setUsers] = useState([]);
@@ -28,7 +28,7 @@ function DisplayUser() {
     //     setLoading(false);
     //   }
     // }
-    getUsers()
+    userService.getUsers()
       .then((response) => {
         setUsers(response.data);
         setLoading(false);
@@ -54,7 +54,7 @@ function DisplayUser() {
   const handleDelete = (userId) => {
     confirm("Are you sure you want to delete?");
     setLoading(true);
-    deleteUser(userId)
+    userService.deleteUser(userId)
       .then((res) => {
         setUsers(users.filter((user) => user.id !== userId));
         setLoading(false);
